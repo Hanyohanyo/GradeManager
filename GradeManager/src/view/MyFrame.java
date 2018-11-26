@@ -11,12 +11,26 @@ public class MyFrame extends JFrame {
 	public MyFrame(String title) {
 		// TODO Auto-generated constructor stub\
 		this.setTitle(title);
-		this.setVisible(true);
-		this.setSize(300, 400);
+		
+		
+		MyMenu menu = new MyMenu(this);
+		
+		setDefaultSetting();
+		
+		
+		
+		
+		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setSize((int)(dim.getWidth()/2), (int)(dim.getHeight()*3/4));
 		this.setLocation((dim.width/2)-(this.getWidth()/2), (dim.height/2)-(this.getHeight()/2));
+
+		this.setVisible(true);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
-	
+	public void setDefaultSetting() {
+		
+	}
 	
 }
